@@ -4,14 +4,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-</head>
-<body>
 	<script type="text/javascript">
-		var d=1;
-		while(d<=5){
-			console.log(d)
-			d++
+		function boochi(){
+			alert()
+		}
+		function demo(){
+			console.log("from change event")
 		}
 	</script>
+</head>
+<body>
+	<input onchange="demo()"/> 
+	<button onclick="boochi()">submit</button>
+
 </body>
 </html>
