@@ -8,8 +8,11 @@
 		function validate(){
 			var firstName=document.getElementById("firstname").value;
 			var number=document.getElementById("mobile").value;
+			var email=document.getElementById("email").value;
 			var firstNameCheck=/^[a-zA-Z ]+$/
 			var mobilecheck=/^[0-9]{10}$/
+			var emailcheck=/^[a-zA-Z#._0-9]+
+			 @[a-z]+\.[a-z]{2,3}$/
 			if(firstName==""||firstName.length<3){
 				alert("please check your name")
 				return false
@@ -26,6 +29,11 @@
 		}
 		return true
 
+		if(!email.match(emailCheck)){
+			alert("check your email id")
+			return false
+		}
+		return true
 	}
 		
 	</script>
@@ -34,7 +42,67 @@
 		<form onsubmit="return validate()">
 		<p><input placeholder="Enter your name" id="firstname"/></p>
 		<p><input placeholder="Enter mobile number" id="mobile"></p>
+		<p><input placeholder="enter email id" id="email"/></p>
 			<button>submit</button>
 			</form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
