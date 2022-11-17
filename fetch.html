@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const PromiseObj=new Promise((resolve,reject)=>{
+			var time=Math.random();
+			console.log(time)
+			if(time<0.5){
+				return resolve("data is available")
+			}
+			else{
+				return reject("sever crashed")
+			}
+		})
+		console.log(PromiseObj)
+		console.log("hello")
+		</script>
+</body>
+</html>
