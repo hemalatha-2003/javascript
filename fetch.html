@@ -4,12 +4,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-</head>
+</head> 
 <body>
 	<section id="emp" style="display:flex;">
 		
 	</section>
 	<script type="text/javascript">
+		function huge(){
+			var username=document.getElementById("username").value,number=document.getElementById("number").value
+			console.log(username,number)
+			fetch("https://reqres.in/api/users",{
+			method:"POST",
+			headers:{
+				"Content-Type":"application/json"
+			},
+			body:JSON.stringify({user:username,passcode:number})
+		})
+	.then((res)=>{
+		console.log(res)
+		return res.json()
+	})
+	.then((f)=>{
+		console.log(f)
+	})
+	
+		}
+
+			
 		/*const PromiseObj=new Promise((resolve,reject)=>{
 			var time=Math.random();
 			console.log(time)
@@ -22,7 +43,7 @@
 		})
 		console.log(PromiseObj)
 		console.log("hello")*/
-		fetch(" https://reqres.in/api/users")
+		/*fetch(" https://reqres.in/api/users")
 		.then((res)=>{
 			console.log(res)
 			return res.json()
@@ -43,7 +64,13 @@
 				</div>`
 				//console.log(employees[i].first_name)
 			}
-		}
+		}*/
+		
 	</script>
+	<div>
+	<input id="username" placeholder="enter your name"/>
+	<input id="number" placeholder="enter your number"/>
+    <button onclick="huge()">submit</button>
+    </div>
 </body>
 </html>
